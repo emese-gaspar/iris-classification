@@ -3,13 +3,13 @@ title: "Iris Classification Project"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## About the data
 
-Because I am still getting used to integrating R with GitHub, I decided to start with a fairly elementary project. I am using a dataset built into R called `iris`. Here is what the R documentation contains about Edgar Anderson's Iris Data:
+Because I am still getting used to integrating R with GitHub, I decided to start with a fairly basic project. I am using a dataset built into R called `iris`. Here is what the R documentation contains about Edgar Anderson's Iris Data:
 
 > *This famous (Fisher's or Anderson's) iris data set gives the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris. The species are Iris setosa, versicolor, and virginica.*
 
@@ -21,19 +21,10 @@ head(iris)
 
 ```{r}
 summary(iris)
-any(is.na(iris))
+if(any(is.na(iris)) == FALSE){
+  print("There are no missing values.")}
+  else{}
+    print("There are missing values.")}
 ```
 
 
-
-
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
